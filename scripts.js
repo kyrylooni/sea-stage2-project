@@ -26,6 +26,8 @@
 
 
 // This is an array of strings (TV show titles)
+// An array of objects, where each object contains both the title and the corresponding image URL. 
+// This way allows to add new shows with their images without modifying the code structure. 
 let shows = [
     { title: "Fresh Prince of Bel Air", imageUrl:"https://upload.wikimedia.org/wikipedia/en/3/33/Fresh_Prince_S1_DVD.jpg"},
     { title: "Curb Your Enthusiasm", imageUrl:"https://m.media-amazon.com/images/M/MV5BZDY1ZGM4OGItMWMyNS00MDAyLWE2Y2MtZTFhMTU0MGI5ZDFlXkEyXkFqcGdeQXVyMDc5ODIzMw@@._V1_FMjpg_UX1000_.jpg"},
@@ -41,6 +43,9 @@ function showCards() {
     cardContainer.innerHTML = "";
     const templateCard = document.querySelector(".card");
     
+
+    // 
+
     for (let i = 0; i < shows.length; i++) {
         const show = shows[i];
         const nextCard = templateCard.cloneNode(true);
@@ -74,6 +79,6 @@ function quoteAlert() {
 }
 
 function removeLastCard() {
-    titles.pop(); // Remove last item in titles array
-    showCards(); // Call showCards again to refresh
+    shows.pop();
+    showCards();
 }
