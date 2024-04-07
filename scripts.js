@@ -155,6 +155,7 @@ let albums = [
 
 function displayAlbums() {
     const container = document.getElementById('album-container');
+    container.innerHTML = ''; // Clear the container
     albums.forEach(album => {
         const albumImage = document.createElement('img');
         albumImage.src = album.imageUrl;
@@ -176,3 +177,14 @@ function displayAlbums() {
         container.appendChild(albumDiv); // Append the new div to the container
     });
 }
+
+
+function removeLastAlbum() {
+    if (albums.length > 0) {
+        albums.pop(); // Remove the last element from the array
+        displayAlbums(); // Update the display
+    } else {
+        alert("No more albums to remove!");
+    }
+}
+   
