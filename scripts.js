@@ -28,6 +28,7 @@
 // This is an array of strings (TV show titles)
 // An array of objects, where each object contains both the title and the corresponding image URL. 
 // This way allows to add new shows with their images without modifying the code structure. 
+/*
 let shows = [
     { title: "Fresh Prince of Bel Air", imageUrl:"https://upload.wikimedia.org/wikipedia/en/3/33/Fresh_Prince_S1_DVD.jpg"},
     { title: "Curb Your Enthusiasm", imageUrl:"https://m.media-amazon.com/images/M/MV5BZDY1ZGM4OGItMWMyNS00MDAyLWE2Y2MtZTFhMTU0MGI5ZDFlXkEyXkFqcGdeQXVyMDc5ODIzMw@@._V1_FMjpg_UX1000_.jpg"},
@@ -81,4 +82,86 @@ function quoteAlert() {
 function removeLastCard() {
     shows.pop();
     showCards();
+}
+*/
+
+let albums = [
+    {
+        artist: "Artist Name",
+        title: "Album Title",
+        genre: "Genre",
+        releaseDate: "YYYY-MM-DD",
+        label: "Music Label",
+        rating: 4,
+        tracklist: ["Track 1", "Track 2", "Track 3", "Track 4", "Track 5"]
+
+    },
+    { 
+        artist: "Artist Name",
+        title: "Album Title",
+        genre: "Genre",
+        releaseDate: "YYYY-MM-DD",
+        label: "Music Label",
+        rating: 3,
+        tracklist: ["Track 1", "Track 2", "Track 3", "Track 4", "Track 5"]
+    },
+    {
+        artist: "Artist Name",
+        title: "Album Title",
+        genre: "Genre",
+        releaseDate: "YYYY-MM-DD",
+        label: "Music Label",
+        rating: 5,
+        tracklist: ["Track 1", "Track 2", "Track 3", "Track 4", "Track 5"]
+    },
+    {
+        artist: "Artist Name",
+        title: "Album Title",
+        genre: "Genre",
+        releaseDate: "YYYY-MM-DD",
+        label: "Music Label",
+        rating: 2,
+        tracklist: ["Track 1", "Track 2", "Track 3", "Track 4", "Track 5"]
+    
+    },
+    {
+        artist: "Artist Name",
+        title: "Album Title",
+        genre: "Genre",
+        releaseDate: "YYYY-MM-DD",
+        label: "Music Label",
+        rating: 4,
+        tracklist: ["Track 1", "Track 2", "Track 3", "Track 4", "Track 5"]
+    }, 
+    {
+    
+        artist: "Artist Name",
+        title: "Album Title",
+        genre: "Genre",
+        releaseDate: "YYYY-MM-DD",
+        label: "Music Label",
+        rating: 4,
+        tracklist: ["Track 1", "Track 2", "Track 3", "Track 4", "Track 5"]
+    }
+        
+   
+];
+
+function displayAlbums() {
+    const container = document.getElementById('album-container');
+    albums.forEach(album => {
+        const albumDiv = document.createElement('div');
+        albumDiv.innerHTML = `
+            <h2>${album.title} - ${album.artist}</h2>
+            <p>Genre: ${album.genre}</p>
+            <p>Release Date: ${album.releaseDate}</p>
+            <p>Label: ${album.label}</p>
+            <p>Rating: ${album.rating}</p>
+            <h3>Tracklist:</h3>
+            <ul>
+                ${album.tracklist.map(track => `<li>${track}</li>`).join('')}
+            </ul>
+        `;
+        container.appendChild(albumDiv); // Append the new div to the container
+    });
 }
