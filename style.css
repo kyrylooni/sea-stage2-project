@@ -5,16 +5,17 @@ body {
 }
 
 .main-header {
-    background-color: rgba(0, 0, 0, .3);
+    background-color: rgba(237, 35, 35, 0.985);
     padding-bottom: 10px;
+    
 }
 
 .title {
     text-align: center;
     margin: 0;
     font-size: 8em;
-    font-family: "Helvetica";
-    font-weight: normal;
+    font-family: "SF Pro Display";
+    font-weight: 250px;
     color: white;
 }
 
