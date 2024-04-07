@@ -213,10 +213,11 @@ function searchAlbums() {
 }
 
 // Event listener for the search button
-document.getElementById('search-section').addEventListener('click', searchAlbums());
-
-document.getElementById('search-section').addEventListener('keyup', function(event) {
-    if (event.key === 'Enter') {
-        searchAlbums();
+document.addEventListener('DOMContentLoaded', function() {
+    const searchButton = document.getElementById('search-button');
+    if(searchButton) {
+        searchButton.addEventListener('click', searchAlbums);
+    } else {
+        console.error('Search button not found');
     }
 });
