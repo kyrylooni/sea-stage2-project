@@ -53,7 +53,7 @@ body {
     /* other styles */
 }
 
-button {
+#removeLastAlbum {
     text-align: center;
     background-color: #544f4f; /* This should be replaced with the specific gradient or solid color as per the image */
     border: none;

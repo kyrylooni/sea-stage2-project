@@ -87,13 +87,13 @@ function removeLastCard() {
 
 let albums = [
     {
-        artist: "Artist Name",
-        title: "Album Title",
-        genre: "Genre",
-        releaseDate: "YYYY-MM-DD",
-        label: "Music Label",
+        artist: "Eminem",
+        title: "The Marshall Mathers LP",
+        genre: "Hip Hop/Rap",
+        releaseDate: "2000-05-23",
+        label: "Aftermath Entertainment",
         rating: 4,
-        tracklist: ["Track 1", "Track 2", "Track 3", "Track 4", "Track 5"],
+        tracklist: ["The Real Slim Shady", "Track 2", "Track 3", "Track 4", "Track 5"],
         imageUrl: "https://upload.wikimedia.org/wikipedia/en/3/33/Fresh_Prince_S1_DVD.jpg"
 
     },
@@ -188,3 +188,35 @@ function removeLastAlbum() {
     }
 }
    
+function searchAlbums() {
+    const searchTerm = document.getElementById('search-input').value.toLowerCase();
+    const container = document.getElementById('album-container');
+    container.innerHTML = ''; // Clear the album display
+
+    const filteredAlbums = albums.filter(album => 
+        album.title.toLowerCase().includes(searchTerm) ||
+        album.artist.toLowerCase().includes(searchTerm)
+    );
+
+    // If no albums found, display a message
+    if (filteredAlbums.length === 0) {
+        container.innerHTML = '<p>No albums found. Please try another search.</p>';
+        return;
+    }
+
+    // Otherwise, display the filtered albums
+    filteredAlbums.forEach(album => {
+        const albumDiv = document.createElement('div');
+        // ... Set albumDiv details based on the album ...
+        container.appendChild(albumDiv);
+    });
+}
+
+// Event listener for the search button
+document.getElementById('search-section').addEventListener('click', searchAlbums());
+
+document.getElementById('search-section').addEventListener('keyup', function(event) {
+    if (event.key === 'Enter') {
+        searchAlbums();
+    }
+});
