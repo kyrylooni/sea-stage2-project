@@ -93,7 +93,8 @@ let albums = [
         releaseDate: "YYYY-MM-DD",
         label: "Music Label",
         rating: 4,
-        tracklist: ["Track 1", "Track 2", "Track 3", "Track 4", "Track 5"]
+        tracklist: ["Track 1", "Track 2", "Track 3", "Track 4", "Track 5"],
+        imageUrl: "https://upload.wikimedia.org/wikipedia/en/3/33/Fresh_Prince_S1_DVD.jpg"
 
     },
     { 
@@ -103,7 +104,8 @@ let albums = [
         releaseDate: "YYYY-MM-DD",
         label: "Music Label",
         rating: 3,
-        tracklist: ["Track 1", "Track 2", "Track 3", "Track 4", "Track 5"]
+        tracklist: ["Track 1", "Track 2", "Track 3", "Track 4", "Track 5"],
+        imageUrl: "https://m.media-amazon.com/images/M/MV5BZDY1ZGM4OGItMWMyNS00MDAyLWE2Y2MtZTFhMTU0MGI5ZDFlXkEyXkFqcGdeQXVyMDc5ODIzMw@@._V1_FMjpg_UX1000_.jpg"
     },
     {
         artist: "Artist Name",
@@ -112,7 +114,8 @@ let albums = [
         releaseDate: "YYYY-MM-DD",
         label: "Music Label",
         rating: 5,
-        tracklist: ["Track 1", "Track 2", "Track 3", "Track 4", "Track 5"]
+        tracklist: ["Track 1", "Track 2", "Track 3", "Track 4", "Track 5"],
+        imageUrl: "https://static.wikia.nocookie.net/hulu/images/6/64/East_Los_High.jpg"
     },
     {
         artist: "Artist Name",
@@ -121,7 +124,8 @@ let albums = [
         releaseDate: "YYYY-MM-DD",
         label: "Music Label",
         rating: 2,
-        tracklist: ["Track 1", "Track 2", "Track 3", "Track 4", "Track 5"]
+        tracklist: ["Track 1", "Track 2", "Track 3", "Track 4", "Track 5"],
+        imageUrl: "https://static.wikia.nocookie.net/hulu/images/6/64/East_Los_High.jpg"
     
     },
     {
@@ -131,7 +135,8 @@ let albums = [
         releaseDate: "YYYY-MM-DD",
         label: "Music Label",
         rating: 4,
-        tracklist: ["Track 1", "Track 2", "Track 3", "Track 4", "Track 5"]
+        tracklist: ["Track 1", "Track 2", "Track 3", "Track 4", "Track 5"],
+        imageUrl: "https://upload.wikimedia.org/wikipedia/en/3/33/Fresh_Prince_S1_DVD.jpg"
     }, 
     {
     
@@ -141,7 +146,8 @@ let albums = [
         releaseDate: "YYYY-MM-DD",
         label: "Music Label",
         rating: 4,
-        tracklist: ["Track 1", "Track 2", "Track 3", "Track 4", "Track 5"]
+        tracklist: ["Track 1", "Track 2", "Track 3", "Track 4", "Track 5"], 
+        imageUrl: "https://m.media-amazon.com/images/M/MV5BZDY1ZGM4OGItMWMyNS00MDAyLWE2Y2MtZTFhMTU0MGI5ZDFlXkEyXkFqcGdeQXVyMDc5ODIzMw@@._V1_FMjpg_UX1000_.jpg"
     }
         
    
@@ -150,6 +156,11 @@ let albums = [
 function displayAlbums() {
     const container = document.getElementById('album-container');
     albums.forEach(album => {
+        const albumImage = document.createElement('img');
+        albumImage.src = album.imageUrl;
+        albumImage.alt = `Cover of ${album.title}`;
+        container.appendChild(albumImage);
+
         const albumDiv = document.createElement('div');
         albumDiv.innerHTML = `
             <h2>${album.title} - ${album.artist}</h2>

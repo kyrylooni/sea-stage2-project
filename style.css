@@ -46,3 +46,9 @@ body {
     list-style: none;
     padding: 0;
 }
+
+#album-container img {
+    width: 300px; /* or any other size */
+    margin: 10px;
+    /* other styles */
+}
