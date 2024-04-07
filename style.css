@@ -52,3 +52,26 @@ body {
     margin: 10px;
     /* other styles */
 }
+
+button {
+    text-align: center;
+    background-color: #544f4f; /* This should be replaced with the specific gradient or solid color as per the image */
+    border: none;
+    padding: 10px 20px; /* Adjust padding to match the aspect ratio of the button in the image */
+    height: 40px; /* Adjust height as necessary to match the image */
+    border-radius: 20px; /* This gives a pill-like shape, adjust as necessary */
+    color: rgb(237, 37, 37);
+    font-size: 22px;
+    font-weight: bold; /* Add bold if the text in the image is bold */
+    cursor: pointer;
+    margin: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth, if present in the image */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+button:hover {
+    background-color: #555; /* Darken button on hover, adjust color as needed */
+}
+
+button:active {
+    transform: scale(0.98); /* Slightly shrink the button when clicked */
+}
