@@ -20,17 +20,18 @@ body {
 }
 
 #album-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Four columns of equal width */
+    gap: 10px; /* Space between grid items */
+    padding: 20px; /* Padding around the grid */
 }
 
 .album {
     display: flex; /* Change this from 'none' to 'flex' via JavaScript */
     flex-direction: column;
-    width: 200px; /* Adjust as needed */
+    width: 200px; 
     margin: 10px;
+    margin-bottom: 2;
     padding: 15px;
     border: 1px solid #ddd;
     border-radius: 8px;
@@ -55,17 +56,17 @@ body {
 
 #removeLastAlbum {
     text-align: center;
-    background-color: #544f4f; /* This should be replaced with the specific gradient or solid color as per the image */
+    background-color: #544f4f;
     border: none;
-    padding: 10px 20px; /* Adjust padding to match the aspect ratio of the button in the image */
-    height: 40px; /* Adjust height as necessary to match the image */
-    border-radius: 20px; /* This gives a pill-like shape, adjust as necessary */
+    padding: 10px 20px; 
+    height: 40px; 
+    border-radius: 20px; /* This gives a pill-like shape */
     color: rgb(237, 37, 37);
     font-size: 22px;
-    font-weight: bold; /* Add bold if the text in the image is bold */
+    font-weight: bold; 
     cursor: pointer;
     margin: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth, if present in the image */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* shadow for depth, if present in the image */
     transition: background-color 0.3s ease; /* Smooth transition for hover effect */
 }
 button:hover {
@@ -74,4 +75,44 @@ button:hover {
 
 button:active {
     transform: scale(0.98); /* Slightly shrink the button when clicked */
+}
+
+/* Style for the search input */
+#search-input {
+    padding: 10px;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    margin: 5px;
+    font-size: 18px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Shared style for both search button and remove last album button */
+#search-button {
+    background-color: #544f4f;
+
+    border: 4px solid black;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    cursor: pointer;
+}
+
+#search-button::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 6px;
+    background-color: black;
+    bottom: -4px;
+    right: -6px;
+    transform: rotate(45deg);
+    border-radius: 3px 0 0 0;
+}
+
+/* Additional hover effect for buttons */
+.button-shared-style:hover {
+    background-color: #3c3838; /* Darker shade on hover */
 }
