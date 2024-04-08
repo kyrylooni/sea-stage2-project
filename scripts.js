@@ -208,6 +208,18 @@ function searchAlbums() {
     filteredAlbums.forEach(album => {
         const albumDiv = document.createElement('div');
         // ... Set albumDiv details based on the album ...
+        albumDiv.innerHTML = `
+        <img src="${album.imageUrl}" alt="Cover of ${album.title}" class="album-cover"> <!-- Album cover image -->
+            <h2>${album.title} - ${album.artist}</h2>
+            <p>Genre: ${album.genre}</p>
+            <p>Release Date: ${album.releaseDate}</p>
+            <p>Label: ${album.label}</p>
+            <p>Rating: ${album.rating}</p>
+            <h3>Tracklist:</h3>
+            <ul>
+                ${album.tracklist.map(track => `<li>${track}</li>`).join('')}
+            </ul>
+        `;
         container.appendChild(albumDiv);
     });
 }
