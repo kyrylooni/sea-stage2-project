@@ -118,7 +118,6 @@ function displayAlbums() {
     });
 }
 
-
 function removeLastAlbum() {
     if (albums.length > 0) {
         albums.pop(); // Remove the last element from the array
@@ -172,4 +171,35 @@ document.addEventListener('DOMContentLoaded', function() {
     } else {
         console.error('Search button not found');
     }
+});
+
+function addAlbum() {
+
+    // Create a new album object from form values
+    const newAlbum = {
+        artist: document.getElementById('artist').value,
+        title: document.getElementById('title').value,
+        genre: document.getElementById('genre').value,
+        releaseDate: document.getElementById('release-date').value,
+        label: document.getElementById('label').value,
+        rating: document.getElementById('rating').value,
+        tracklist: document.getElementById('tracklist').value.split(','),
+        imageUrl: document.getElementById('image').value,
+        // Add other properties based on the form inputs
+    };
+
+
+    // Add new album to the albums array
+    albums.push(newAlbum);
+
+    
+    // Update the album display
+    displayAlbums(); // Assuming you have a function to display albums
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('add-album-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        addAlbum();
+    });
 });
