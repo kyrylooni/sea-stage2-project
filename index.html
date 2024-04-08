@@ -2,8 +2,8 @@
 <html>
 
 <head>
-    <title>LA TV Shows | Home</title>
-    <meta name="description" content="A Catalog of Shows Set in Los Angeles">
+    <title>Music Album Directory | Home</title>
+    <meta name="description" content="A Catalog of Music Albums">
     <link rel="stylesheet" href="style.css" />
     <script type="text/javascript" src="scripts.js"></script>
 </head>
@@ -18,23 +18,15 @@
                 <button id="search-button"></button>
             </div>
         </header>
-        <div id="search-filter-section">
-            <!-- Search and filter inputs -->
-        </div>
-        <div id="album-container">
+       
+     <div id="album-container">
 
-        </div>
-        <div class="album-card" style="display: none;">
-            <!-- Template for album card -->
-        </div>
-        <!-- Form for adding/updating albums -->
-        <div id="album-form">
-            <!-- Form elements go here -->
-        </div>
+     </div>
+        
+    </div>
         <div class="footer">
-            <!-- Footer content -->
             <button id="removeLastAlbum"   onclick="removeLastAlbum();" >
-                Remove an album!</button>
+                Remove an album</button>
         </div>
         <script>
             document.addEventListener("DOMContentLoaded", displayAlbums);

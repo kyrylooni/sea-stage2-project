@@ -1,13 +1,22 @@
 html,
 body {
+    background-color: #c2cad7;
     margin: 0;
     padding: 0;
 }
 
 .main-header {
-    background-color: rgba(237, 35, 35, 0.985);
-    padding-bottom: 10px;
+    background-color: #fc3c44; /* Light background color */
+    text-align: center; /* Centering the content */
+    padding: 20px 0; /* Padding on top and bottom */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
     
+h1 {
+    margin: 0; /* Remove default margin */
+    font-size: 2em; /* Large font size */
+    font-family: "Arial", Gadget, sans-serif; /* Font family */
+    color: #0b0404; /* Dark text color */
 }
 
 .title {
@@ -49,9 +58,11 @@ body {
 }
 
 #album-container img {
-    width: 300px; /* or any other size */
+    width: 300px; 
     margin: 10px;
-    /* other styles */
+    border-radius: 8px;
+    border: 5px solid black;
+    
 }
 
 #removeLastAlbum {
@@ -90,9 +101,8 @@ button:active {
 
 /* Shared style for both search button and remove last album button */
 #search-button {
-    background-color: #544f4f;
-
-    border: 4px solid black;
+    background-color: #fc3c44;
+    border: 2px solid rgb(255, 255, 255);
     border-radius: 50%;
     width: 30px;
     height: 30px;
@@ -105,14 +115,14 @@ button:active {
     position: absolute;
     width: 10px;
     height: 6px;
-    background-color: black;
+    background-color: rgb(255, 255, 255);
     bottom: -4px;
     right: -6px;
     transform: rotate(45deg);
-    border-radius: 3px 0 0 0;
+    border-radius: 2px 0 0 0;
 }
 
 /* Additional hover effect for buttons */
-.button-shared-style:hover {
-    background-color: #3c3838; /* Darker shade on hover */
+#search-button:hover {
+    background-color: #b01e1e; /* Darker shade on hover */
 }

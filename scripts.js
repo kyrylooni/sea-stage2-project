@@ -24,67 +24,6 @@
  */
 
 
-
-// This is an array of strings (TV show titles)
-// An array of objects, where each object contains both the title and the corresponding image URL. 
-// This way allows to add new shows with their images without modifying the code structure. 
-/*
-let shows = [
-    { title: "Fresh Prince of Bel Air", imageUrl:"https://upload.wikimedia.org/wikipedia/en/3/33/Fresh_Prince_S1_DVD.jpg"},
-    { title: "Curb Your Enthusiasm", imageUrl:"https://m.media-amazon.com/images/M/MV5BZDY1ZGM4OGItMWMyNS00MDAyLWE2Y2MtZTFhMTU0MGI5ZDFlXkEyXkFqcGdeQXVyMDc5ODIzMw@@._V1_FMjpg_UX1000_.jpg"},
-    { title: "East Los High", imageUrl:"https://static.wikia.nocookie.net/hulu/images/6/64/East_Los_High.jpg"},
-]
-// Your final submission should have much more data than this, and 
-// you should use more than just an array of strings to store it all.
-
-
-// This function adds cards the page to display the data in the array
-function showCards() {
-    const cardContainer = document.getElementById("card-container");
-    cardContainer.innerHTML = "";
-    const templateCard = document.querySelector(".card");
-    
-
-    // 
-
-    for (let i = 0; i < shows.length; i++) {
-        const show = shows[i];
-        const nextCard = templateCard.cloneNode(true);
-        editCardContent(nextCard, show.title, show.imageUrl);
-        cardContainer.appendChild(nextCard);
-    }
-}
-
-function editCardContent(card, newTitle, newImageURL) {
-    card.style.display = "block";
-
-    const cardHeader = card.querySelector("h2");
-    cardHeader.textContent = newTitle;
-
-    const cardImage = card.querySelector("img");
-    cardImage.src = newImageURL;
-    cardImage.alt = newTitle + " Poster";
-
-    // You can use console.log to help you debug!
-    // View the output by right clicking on your website,
-    // select "Inspect", then click on the "Console" tab
-    console.log("new card:", newTitle, "- html: ", card);
-}
-
-// This calls the addCards() function when the page is first loaded
-document.addEventListener("DOMContentLoaded", showCards);
-
-function quoteAlert() {
-    console.log("Button Clicked!")
-    alert("I guess I can kiss heaven goodbye, because it got to be a sin to look this good!");
-}
-
-function removeLastCard() {
-    shows.pop();
-    showCards();
-}
-*/
-
 let albums = [
     {
         artist: "Eminem",
@@ -94,60 +33,61 @@ let albums = [
         label: "Aftermath Entertainment",
         rating: 4,
         tracklist: ["The Real Slim Shady", "Track 2", "Track 3", "Track 4", "Track 5"],
-        imageUrl: "https://upload.wikimedia.org/wikipedia/en/3/33/Fresh_Prince_S1_DVD.jpg"
+        imageUrl: "https://upload.wikimedia.org/wikipedia/en/6/69/The_Marshall_Mathers_LP_second_cover.jpg"
 
     },
     { 
-        artist: "Artist Name",
-        title: "Album Title",
-        genre: "Genre",
-        releaseDate: "YYYY-MM-DD",
-        label: "Music Label",
+        artist: "50 Cent",
+        title: "Get Rich or Die Tryin'",
+        genre: "Hip Hop/Rap",
+        releaseDate: "2003-02-06",
+        label: "Shady Records, Aftermath Entertainment, Interscope Records",
         rating: 3,
         tracklist: ["Track 1", "Track 2", "Track 3", "Track 4", "Track 5"],
-        imageUrl: "https://m.media-amazon.com/images/M/MV5BZDY1ZGM4OGItMWMyNS00MDAyLWE2Y2MtZTFhMTU0MGI5ZDFlXkEyXkFqcGdeQXVyMDc5ODIzMw@@._V1_FMjpg_UX1000_.jpg"
+        imageUrl: "https://upload.wikimedia.org/wikipedia/en/9/9d/Get_Rich_Or_Die_Tryin%27.JPG"
     },
     {
-        artist: "Artist Name",
-        title: "Album Title",
-        genre: "Genre",
-        releaseDate: "YYYY-MM-DD",
-        label: "Music Label",
+        artist: "Ed Sheeran",
+        title: "No.6 Collaborations Project",
+        genre: "Pop",
+        releaseDate: "2019-07-12",
+        label: "Atlantic Records, Asylum Records",
         rating: 5,
         tracklist: ["Track 1", "Track 2", "Track 3", "Track 4", "Track 5"],
-        imageUrl: "https://static.wikia.nocookie.net/hulu/images/6/64/East_Los_High.jpg"
+        imageUrl: "https://upload.wikimedia.org/wikipedia/en/4/4f/Ed_Sheeran_-_No._6_Collaborations_Project.png"
     },
     {
-        artist: "Artist Name",
-        title: "Album Title",
-        genre: "Genre",
-        releaseDate: "YYYY-MM-DD",
-        label: "Music Label",
-        rating: 2,
+        artist: "Bad Bunny",
+        title: "Un Verano Sin Ti",
+        genre: "Latin",
+        releaseDate: "2022-05-06",
+        label: "Rimas Entertainment",
+        rating: 5,
         tracklist: ["Track 1", "Track 2", "Track 3", "Track 4", "Track 5"],
-        imageUrl: "https://static.wikia.nocookie.net/hulu/images/6/64/East_Los_High.jpg"
+        imageUrl: "https://upload.wikimedia.org/wikipedia/en/6/60/Bad_Bunny_-_Un_Verano_Sin_Ti.png"
     
     },
     {
-        artist: "Artist Name",
-        title: "Album Title",
-        genre: "Genre",
-        releaseDate: "YYYY-MM-DD",
-        label: "Music Label",
+        artist: "Okean Elzy",
+        title: "Zemlya",
+        genre: "Rock",
+        releaseDate: "2013-05-15",
+        label: "Lavina Music",
         rating: 4,
-        tracklist: ["Track 1", "Track 2", "Track 3", "Track 4", "Track 5"],
-        imageUrl: "https://upload.wikimedia.org/wikipedia/en/3/33/Fresh_Prince_S1_DVD.jpg"
+        tracklist: ["Z Neyu (With her)", "Stina (The Wall)", "Bodegita", "Nezalezhnist' (Independence)", "Rendez-Vous", "Strilyaj (Shoot)", 
+                    "Obijmy (Hugs)", "Karavan (Caravan)", "Dzhul'jetta (Juliet)","Na Nebi (In the Sky)", "Pory Roku (Seasons)", "Koly Navkolo Ni Dushi (When There Are No Souls Around)"],
+        imageUrl: "https://www.okeanelzy.com/upload/iblock/7b4/7b45554f93c363fd5542b78f6a88735d.jpg"
     }, 
     {
     
-        artist: "Artist Name",
-        title: "Album Title",
-        genre: "Genre",
-        releaseDate: "YYYY-MM-DD",
-        label: "Music Label",
-        rating: 4,
+        artist: "Arctic Monkeys",
+        title: "AM (Arctic Monkeys album)",
+        genre: "Alterntive",
+        releaseDate: "2013-09-09",
+        label: "Domino Recording Company",
+        rating: 5,
         tracklist: ["Track 1", "Track 2", "Track 3", "Track 4", "Track 5"], 
-        imageUrl: "https://m.media-amazon.com/images/M/MV5BZDY1ZGM4OGItMWMyNS00MDAyLWE2Y2MtZTFhMTU0MGI5ZDFlXkEyXkFqcGdeQXVyMDc5ODIzMw@@._V1_FMjpg_UX1000_.jpg"
+        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/e/e7/%22AM%22_%28Arctic_Monkeys%29.jpg"
     }
         
    
