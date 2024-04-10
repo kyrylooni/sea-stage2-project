@@ -1,78 +1,53 @@
 html,
 body {
-    background-color: #c2cad7;
-    margin: 0;
-    padding: 0;
+    background-color: #f7f7f7;
+    font-family: "Sans-serif", Arial, Helvetica, sans-serif;
+
 }
 
 .main-header {
-    background-color: #fc3c44; /* Light background color */
+    color: #3d2173a1;
     text-align: center; /* Centering the content */
-    padding: 20px 0; /* Padding on top and bottom */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
     
-h1 {
-    margin: 0; /* Remove default margin */
-    font-size: 2em; /* Large font size */
-    font-family: "Arial", Gadget, sans-serif; /* Font family */
-    color: #0b0404; /* Dark text color */
-}
-
-.title {
-    text-align: center;
-    margin: 0;
-    font-size: 8em;
-    font-family: "Arial", Gadget, sans-serif;
-    font-weight: 250px;
-    color: white;
+/* Style for the header */
+header {
+    background-color: #f7f7f7;
 }
 
 #album-container {
+    color: #3d2173a1;
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* Four columns of equal width */
     gap: 10px; /* Space between grid items */
     padding: 20px; /* Padding around the grid */
 }
 
-.album {
-    display: flex; /* Change this from 'none' to 'flex' via JavaScript */
-    flex-direction: column;
-    width: 200px; 
-    margin: 10px;
-    margin-bottom: 2;
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    background-color: #f9f9f9;
-}
-
-.album-content {
-    margin-bottom: 10px;
-}
-
-
-.album-tracklist {
-    list-style: none;
-    padding: 0;
-}
-
 #album-container img {
     width: 300px; 
     margin: 10px;
-    border-radius: 8px;
-    border: 5px solid black;
+    position: relative;
+    border-radius: 7px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px #3d2173a1;
     
 }
 
+#album-container img:hover {
+    transform: scale(1.1);
+    transition: transform 0.5s;
+}
+
+
 #removeLastAlbum {
     text-align: center;
-    background-color: #544f4f;
+    background-color: #ffffff;
     border: none;
     padding: 10px 20px; 
     height: 40px; 
-    border-radius: 20px; /* This gives a pill-like shape */
-    color: rgb(237, 37, 37);
+    border-radius: 20px; 
+    color: #3d2173a1;
     font-size: 22px;
     font-weight: bold; 
     cursor: pointer;
@@ -80,8 +55,9 @@ h1 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* shadow for depth, if present in the image */
     transition: background-color 0.3s ease; /* Smooth transition for hover effect */
 }
+
 button:hover {
-    background-color: #555; /* Darken button on hover, adjust color as needed */
+    background-color: #9275d0; /* Darken button on hover, adjust color as needed */
 }
 
 button:active {
@@ -101,8 +77,8 @@ button:active {
 
 /* Shared style for both search button and remove last album button */
 #search-button {
-    background-color: #fc3c44;
-    border: 2px solid rgb(255, 255, 255);
+    background-color: #eee4e5;
+    border: 2px solid #3d2173a1;
     border-radius: 50%;
     width: 30px;
     height: 30px;
@@ -115,7 +91,7 @@ button:active {
     position: absolute;
     width: 10px;
     height: 6px;
-    background-color: rgb(255, 255, 255);
+    background-color: #3d2173a1;
     bottom: -4px;
     right: -6px;
     transform: rotate(45deg);
@@ -125,4 +101,31 @@ button:active {
 /* Additional hover effect for buttons */
 #search-button:hover {
     background-color: #b01e1e; /* Darker shade on hover */
+}
+
+#add-album {
+    text-align: center;
+    background-color: #ffffff;
+    border: none;
+    padding: 10px 20px; 
+    height: 40px; 
+    border-radius: 20px; 
+    color: #3d2173a1;
+    font-size: 22px;
+    font-weight: bold; 
+    cursor: pointer;
+    margin: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* shadow for depth, if present in the image */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+
+}
+
+input[type=text] {
+    padding: 10px;
+    height: 20;
+    border-radius: 10px;
+    border: none;
+    margin: 5px;
+    font-size: 18px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }

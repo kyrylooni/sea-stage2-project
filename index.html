@@ -9,37 +9,36 @@
 </head>
 
 <body>
-    <<body>
+    <body>
         <header class="main-header">
-            <h1 class="title">Music Album Directory</h1>
+            <h1 class="title"> Music Album Directory </h1>
 
             <div id="search-section">
                 <input type="text" id="search-input" placeholder="Search by Title or Artist" />
-                <button id="search-button"></button>
-
-
-                <form id="add-album-form">
-                    <input type="text" id="artist" name="artist" placeholder="Artist Name" required />
-                    <input type="text" id="title" name="title" placeholder="Album Title" required />
-                    <input type="text" id="release-date" name="release-date" placeholder="Release Date (YYYY-MM-DD)" required />
-                    <input type="text" id="genre" name="genre" placeholder="Genre" required />
-                    <input type="text" id="label" name="label" placeholder="Label" required />
-                    <input type="text" id="image" name="image" placeholder="Image URL" required />
-                    <input type="text" id="rating" name="rating" placeholder="Rating" required />
-                    <input type="text" id="tracklist" name="tracklist" placeholder="Tracklist" required />
-                    <button type="submit">Add Album</button>
-                </form>
-        </div>
+                <button id="search-button"> </button>
             </div>
         </header>
+
+        <div>
+            <form id="add-album-form">
+                <input type="text" id="artist" name="artist" placeholder="Artist Name" required />
+                <input type="text" id="title" name="title" placeholder="Album Title" required />
+                <input type="text" id="release-date" name="release-date" placeholder="Release Date (YYYY-MM-DD)" required />
+                <input type="text" id="genre" name="genre" placeholder="Genre" required />
+                <input type="text" id="label" name="label" placeholder="Label" required />
+                <input type="text" id="image" name="image" placeholder="Image URL" required />
+                <input type="text" id="rating" name="rating" placeholder="Rating" required />
+                <input type="text" id="tracklist" name="tracklist" placeholder="Tracklist" required />
+                <button id= "add-album" type="submit">Add Album</button>
+            </form>
+    </div>
        
      <div id="album-container">
 
      </div>
-        
-    </div>
+
         <div class="footer">
-            <button id="removeLastAlbum"   onclick="removeLastAlbum();" >
+            <button id="removeLastAlbum" onclick="removeLastAlbum();" >
                 Remove an album</button>
         <script>
             document.addEventListener("DOMContentLoaded", displayAlbums);
