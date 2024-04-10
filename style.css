@@ -100,7 +100,7 @@ button:active {
 
 /* Additional hover effect for buttons */
 #search-button:hover {
-    background-color: #b01e1e; /* Darker shade on hover */
+    background-color: #2d1955a1; /* Darker shade on hover */
 }
 
 #add-album {
